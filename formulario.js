@@ -1,4 +1,5 @@
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector("#form"); //faltaba ;
+const nationality = document.getElementById("nationality");  //to tenia como  jalar el  elemento del html
 
 formulario.onsubmit = function(e) {
 
@@ -29,14 +30,14 @@ if (nombre.length > 0
   agregarInvitado(nombre, edad, nacionalidad)
   }
 }
-
+botonBorrar.addEventListener("click",function(){//se agrega el click para hacer funcionar el boton 
 var botonBorrar = document.createElement("button")
 botonBorrar.textContent = "Eliminar invitado"
 botonBorrar.id = "boton-borrar"
 var corteLinea = document.createElement("br")
 document.body.appendChild(corteLinea)
 document.body.appendChild(botonBorrar);
-
+});
 function agregarInvitado(nombre, edad, nacionalidad) {
 
   if (nacionalidad === "ar") {
